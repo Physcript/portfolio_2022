@@ -1,24 +1,148 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Container } from 'react-bootstrap'
+import me from './img/me.png'
+import me2 from './img/me2.png'
+import p from './img/p.png'
+import ex from './img/ex.png'
+import mongo from './img/mongo.png'
+import ts from './img/ts.png'
+import test from './img/test.jpg'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+
+          <div className = 'bar' >
+            <i className = "fas fa-bars fa-lg" style = {{  }}></i>
+          </div>
+
+        <div className = ''  style = {{ height: '100vh' }}>
+          <div className = 'd-flex align-items-center h-100'>
+            <div className = "d-flex flex-grow-1 flex-column">
+              <p>Hi THERE</p>
+              <h1>I'm <span className = 'c3'>John</span></h1>
+              <p>Mern Stack Developer. Passionate about creating interactive <br />application and expirience on web </p>
+            </div>
+            <div className = "flex-grow-1 lora">
+              <h1>MY PHOTO</h1>
+              <h1>SHOULD BE</h1>
+              <h1>HERE</h1>
+            </div>
+          </div>
+        </div>
+        <div className = ''  style = {{ height: '100vh' }}>
+          <div className = 'd-flex flex-column h-100 justify-content-center'>
+            <h2 style = {{ paddingTop: '20px' }}>My <span className = 'c3'>project</span></h2>
+
+            <div className ='d-flex gap-3'>
+              <div className = 'myCard w-75 p-2 h-100' style = {{ backgroundColor: '#BAABDA' }} >
+                <img src = { p } className = 'img-fluid' />
+              </div>
+              <div className = 'myCard w-25 h-100 p2' style = {{ backgroundColor: '#BAABDA' }} >
+                <div style = {{ backgroundColor: 'white' }}>
+
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className = ''  style = {{ height: '100vh' }}>
+          <div className = 'd-flex flex-column h-100 justify-content-center'>
+            <h2 style = {{ paddingTop: '20px' }}>About <span className = 'c3'>me</span></h2>
+
+            <div className ='d-flex gap-3'>
+              <div className = 'myCard w-50' >
+                <p>I'm a web developer with a focus on the MERN stack, but still exploring other technologies and frameworks that catch my interest</p>
+                <p><br/> </p>
+                <p> I graduated from the International Electorinics Techinical Institute.</p>
+                <br />
+                <p>I am passionate about coding and solving problems through code, and I am excited to work alongside other amazing programmers and learn so much more!</p>
+              </div>
+              <div className = 'myCard ms-auto d-flex flex-column gap-2' style = {{ backgroundColor: '' }} >
+                <img src = { test } className = '' style = {{ width: '' , height: '400px' }}/>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+        <div className = ''  style = {{ height: '100vh' }}>
+            <div className = 'd-flex flex-column h-100 justify-content-center'>
+            <h2 style = {{ paddingTop: '20px' }}>My <span className = 'c3'>ToolKit</span></h2>
+
+            <div className ='d-flex gap-5 my-5'>
+              <div className = 'd-flex flex-column align-items-center'>
+                <i className="fab fa-node fa-4x"></i>
+                <label  className = 'c3'>NODE</label>
+              </div>
+              <div className = 'd-flex flex-column align-items-center'>
+                <i className="fab fa-react fa-4x"></i>
+                <label  className = 'c3'>REACT</label>
+              </div>
+              <div className = 'd-flex flex-column align-items-center'>
+                <i className="fab fa-github fa-4x"></i>
+                <label  className = 'c3'>GITHUB</label>
+              </div>
+              <div className = 'd-flex flex-column align-items-center'>
+                <img src = { ex } style = {{ width:'', height: '60px' }} />
+                <label  className = 'c3'>EXPRESS</label>
+              </div>
+              <div className = 'd-flex flex-column align-items-center'>
+                <img src = { mongo } style = {{ width:'', height: '60px' }} />
+                <label  className = 'c3'>MONGO DB</label>
+              </div>
+              <div className = 'd-flex flex-column align-items-center'>
+                <img src = { ts } style = {{ width:'', height: '60px' }} />
+                <label  className = 'c3'>TYPESCRIPT</label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </Container>
+
+      <div className = 'contact p-3 py-5' style = {{  }}>
+        <Container>
+            <h2 style = {{ paddingTop: '20px' }}><span className = 'c3'>Contact</span></h2>
+            <div className = 'd-flex gap-2'>
+              <div className = 'w-50 p-4'>
+                <p>If you ever want to grab a coffee/bubble tea (virtually) or just want a quick chat - you can find me on social media or you can send me a message here!</p>
+                <br/>
+                <div className = 'd-flex gap-2'>
+                <i className=" c3 fab fa-facebook-square fa-2x"></i>
+                <br />
+                <i className=" c3 fab fa-github-square fa-2x"></i>
+                </div>
+              </div>
+              <div className = 'w-50 d-flex flex-column gap-3'>
+                <input
+                  placeholder = 'Name'
+                />
+                <input
+                  placeholder = 'Email'
+                />
+                <textarea
+                  placeholder = "Message"
+                  rows = { 4 } cols = { 50 }
+                />
+                <button className = 'w-25'>Send</button>
+
+              </div>
+            </div>
+        </Container>
+      </div>
+      <div className = 'footer'>
+        <p>Develop and Design by John Batino</p>
+      </div>
     </div>
   );
 }
