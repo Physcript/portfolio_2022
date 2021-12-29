@@ -9,7 +9,65 @@ import ts from './img/ts.png'
 import test from './img/test.jpg'
 import './App.css';
 
+import { useState } from 'react'
+
+
 function App() {
+
+  const [ data,setData ] = useState({
+    name:'',
+    email:'',
+    message: ''
+  })
+  const [ success,setSuccess ] = useState('')
+  const [ error,setError ] = useState('')
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    e.preventDefault()
+    const { name,value } = e.target
+    setData((val) => ({
+      ...val,
+      [name]:value
+    }))
+  }
+
+  const sendMessageHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+
+    if(data.email === '' || data.message === '') {
+      setError('Dont leave blank 💔')
+      return
+    }
+
+    const url = 'http://localhost:1337/api/mail'
+    const jsonData = JSON.stringify(data)
+
+    const request = new Request(url,{
+      method: 'POST',
+      headers: { 'Content-Type':'application/json' },
+      body: jsonData
+    })
+
+    fetch(request).then((val) => {
+      if(val.status === 200) {
+        val.json().then((res) => {
+          setSuccess('I Got your Message. i will response shortly 📧')
+          setData({
+            name:'',
+            email:'',
+            message: ''
+          })
+        })
+        setError('')
+      }else{
+        val.json().then((res) => {
+          setError('Something went wrong')
+          setSuccess('')
+        })
+      }
+    })
+
+  }
   return (
     <div className="App">
       <Container>
@@ -39,11 +97,13 @@ function App() {
             <div className ='d-flex gap-3'>
               <div className = 'myCard w-75 p-2 h-100' style = {{ backgroundColor: '#BAABDA' }} >
                 <img src = { p } className = 'img-fluid' />
+                <div className =  'image__overlay'>
+                  <div className = 'image__title'>ClothingMania</div>
+                  <p className = 'image__description'>Basic ECommerce site</p>
+                </div>
               </div>
               <div className = 'myCard w-25 h-100 p2' style = {{ backgroundColor: '#BAABDA' }} >
                 <div style = {{ backgroundColor: 'white' }}>
-
-
 
                 </div>
               </div>
@@ -66,7 +126,6 @@ function App() {
               </div>
               <div className = 'myCard ms-auto d-flex flex-column gap-2' style = {{ backgroundColor: '' }} >
                 <img src = { test } className = '' style = {{ width: '' , height: '400px' }}/>
-
               </div>
 
             </div>
@@ -124,24 +183,36 @@ function App() {
                 </div>
               </div>
               <div className = 'w-50 d-flex flex-column gap-3'>
+                <label className = 'c3'>{ success }</label>
+                <label className = 'c3'>{ error }</label>
                 <input
                   placeholder = 'Name'
+                  name = 'name'
+                  value = {data.name}
+                  onChange = { onChange }
+
                 />
                 <input
                   placeholder = 'Email'
+                  name = 'email'
+                  value = {data.email}
+                  onChange = { onChange }
                 />
                 <textarea
                   placeholder = "Message"
+                  name = 'message'
+                  value = {data.message}
+                  onChange = { onChange }
                   rows = { 4 } cols = { 50 }
                 />
-                <button className = 'w-25'>Send</button>
+                <button className = 'w-25' onClick = { sendMessageHandler }>Send</button>
 
               </div>
             </div>
         </Container>
       </div>
       <div className = 'footer'>
-        <p>Develop and Design by John Batino</p>
+        <p>Develop and Design by Me John</p>
       </div>
     </div>
   );
