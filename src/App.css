@@ -5,11 +5,14 @@
   margin: 0;
 }
 
+
 .bar {
   position: fixed;
   top: 30px;
   right: 30px;
+  z-index: 99;
 }
+
 
 p {
   padding: 0;
@@ -66,7 +69,7 @@ textarea:focus, input:focus{
 .myCard {
   padding: 10px;
   border-radius: 5px;
-  height: 250px;
+
   position: relative;
 }
 
@@ -96,4 +99,37 @@ textarea:focus, input:focus{
 }
 .image__description{
   font-size: 1.25em
+}
+
+.mypic {
+  height: 400px;
+}
+
+.se {
+  margin-top: 100px;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .mypic {
+    height: 250px;
+
+  }
+  .first {
+    height: 0;
+    flex-direction: column;
+  }
+  .second {
+    justify-content: flex-start;
+    height: 0vh;
+  }
+
+}
+
+@media only screen and (max-width: 300px) {
+  .mypic {
+    height: 200px;
+  }
+
+
 }
