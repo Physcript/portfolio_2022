@@ -42,7 +42,7 @@ function App() {
       return
     }
 
-    const url = 'http://localhost:1337/api/mail'
+    const url = 'https://portfolio20211.herokuapp.com/api/mail'
     const jsonData = JSON.stringify(data)
 
     const request = new Request(url,{
