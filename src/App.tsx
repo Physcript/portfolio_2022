@@ -83,7 +83,7 @@ function App() {
 
         <div className = 'mt-5'  style = {{ height: '100vh' }}>
           <div className = 'se d-flex flex-column h-100 d-block justify-content-center'>
-            <h2 style = {{ paddingTop: '20px' }}>Hi i'm<span className = 'c3'> John</span></h2>
+            <h2 style = {{ paddingTop: '20px' }}>Hi i'm<span className = 'c3'> Patrick</span></h2>
 
             <div className ='d-lg-flex gap-3'>
               <div className = 'myCard col-lg-6 col' >
@@ -193,7 +193,7 @@ function App() {
         </Container>
       </div>
       <div className = 'footer'>
-        <p>Develop and Design by Me John</p>
+        <p>Develop and Design by Me Patrick</p>
       </div>
     </div>
   );
