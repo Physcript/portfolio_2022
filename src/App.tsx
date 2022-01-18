@@ -115,7 +115,7 @@ function App() {
 
           <div className = 'row justify-content-center'>
             
-            <div className = 'col-md-6 p-2 myCard mx-1' style = {{ backgroundColor: '#BAABDA' }} >
+            <div className = 'col-md-6 p-2 myCard mx-1 col-10' style = {{ backgroundColor: '#BAABDA' }} >
               <img src = { p } className = 'img-fluid' />
               <div className =  'image__overlay'>
               <div className = 'image__title'><a target = '_blanc' href = "https://condescending-dubinsky-a9f266.netlify.app/" style = {{ color:'white' }}>ClothingMania</a></div>
@@ -123,7 +123,7 @@ function App() {
             </div>
             </div>
 
-            <div className = 'col-md-3 p-2' style = {{ backgroundColor: '#BAABDA' }}>
+            <div className = 'col-md-3 p-2 col-10' style = {{ backgroundColor: '#BAABDA' }}>
                 <div className = 'mb-2'>
                 <img src = { p2 } className = 'img-fluid' />
                 </div>
@@ -139,7 +139,7 @@ function App() {
           <br />
           <div className = 'row justify-content-center'>
             
-            <div className = 'col-md-6 p-2 myCard mx-1' style = {{ backgroundColor: '#BAABDA' }} >
+            <div className = 'col-md-6 p-2 myCard mx-1 col-10' style = {{ backgroundColor: '#BAABDA' }} >
               <img src = { b1 } className = 'img-fluid' />
               <div className =  'image__overlay'>
               <div className = 'image__title'><a target = '_blanc' href = "https://suspicious-lamarr-6e5790.netlify.app/" style = {{ color:'white' }}>Blog</a></div>
@@ -147,7 +147,7 @@ function App() {
             </div>
             </div>
 
-            <div className = 'col-md-3 p-2' style = {{ backgroundColor: '#BAABDA' }}>
+            <div className = 'col-md-3 p-2 col-10' style = {{ backgroundColor: '#BAABDA' }}>
                 <div className = 'mb-2'>
                 <img src = { b2 } className = 'img-fluid' />
                 </div>
