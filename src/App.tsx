@@ -6,6 +6,12 @@ import p from './img/p.png'
 import p2 from './img/p2.png'
 import p3 from './img/p3.png'
 import p4 from './img/p4.png'
+
+import b1 from './img/b1.png'
+import b2 from './img/b2.png'
+import b3 from './img/b3.png'
+
+
 import ex from './img/ex.png'
 import mongo from './img/mongo.png'
 import ts from './img/ts.png'
@@ -105,17 +111,57 @@ function App() {
 
         <div className = 'mt-5' >
           <h2 style = {{ paddingTop: '20px' }}>My <span className = 'c3'>Project</span></h2>
-          <div className = 'myCard  p-2 h-100' style = {{ backgroundColor: '#BAABDA' }} >
-            <img src = { p } className = 'img-fluid' />
-            <div className =  'image__overlay'>
-              <div className = 'image__title'>ClothingMania</div>
+          <br />
+
+          <div className = 'row justify-content-center'>
+            
+            <div className = 'col-md-6 p-2 myCard mx-1' style = {{ backgroundColor: '#BAABDA' }} >
+              <img src = { p } className = 'img-fluid' />
+              <div className =  'image__overlay'>
+              <div className = 'image__title'><a target = '_blanc' href = "https://condescending-dubinsky-a9f266.netlify.app/" style = {{ color:'white' }}>ClothingMania</a></div>
               <p className = 'image__description'>Basic ECommerce site</p>
             </div>
+            </div>
+
+            <div className = 'col-md-3 p-2' style = {{ backgroundColor: '#BAABDA' }}>
+                <div className = 'mb-2'>
+                <img src = { p2 } className = 'img-fluid' />
+                </div>
+      
+                <div className = 'mt-2'>
+                <img src = { p4 } className = 'img-fluid' />
+                </div>
+
+            </div>
+
+          
           </div>
-          <div>
-            <img src = { p } className = 'img-fluid' />
+          <br />
+          <div className = 'row justify-content-center'>
+            
+            <div className = 'col-md-6 p-2 myCard mx-1' style = {{ backgroundColor: '#BAABDA' }} >
+              <img src = { b1 } className = 'img-fluid' />
+              <div className =  'image__overlay'>
+              <div className = 'image__title'><a target = '_blanc' href = "https://suspicious-lamarr-6e5790.netlify.app/" style = {{ color:'white' }}>Blog</a></div>
+              <p className = 'image__description'>Basic Blog site</p>
+            </div>
+            </div>
+
+            <div className = 'col-md-3 p-2' style = {{ backgroundColor: '#BAABDA' }}>
+                <div className = 'mb-2'>
+                <img src = { b2 } className = 'img-fluid' />
+                </div>
+      
+                <div className = 'mt-2'>
+                <img src = { b3 } className = 'img-fluid' />
+                </div>
+
+            </div>
+
+            
           </div>
         </div>
+
 
 
         <div className = ''  style = {{ height: '100vh' }}>
