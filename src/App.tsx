@@ -209,7 +209,7 @@ function App() {
                 <div className = 'd-flex gap-2'>
                 <i className=" c3 fab fa-facebook-square fa-2x"></i>
                 <br />
-                <i className=" c3 fab fa-github-square fa-2x"></i>
+                <i className = "hovs c3 fab fa-github-square fa-2x" onClick = { () =>   window.location.assign('https://github.com/Physcript')}></i>
                 </div>
               </div>
               <div className = 'd-flex flex-column gap-3 col col-lg-6'>
