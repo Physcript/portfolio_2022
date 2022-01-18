@@ -81,7 +81,7 @@ function App() {
       </div>
 
 
-        <div className = 'mt-5'  style = {{ height: '100vh' }}>
+        <div className = 'mt-5'  style = {{ height: '90vh' }}>
           <div className = 'se d-flex flex-column h-100 d-block justify-content-center'>
             <h2 style = {{ paddingTop: '20px' }}>Hi i'm<span className = 'c3'> Patrick</span></h2>
 
