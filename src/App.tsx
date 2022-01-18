@@ -112,6 +112,9 @@ function App() {
               <p className = 'image__description'>Basic ECommerce site</p>
             </div>
           </div>
+          <div>
+            <img src = { p } className = 'img-fluid' />
+          </div>
         </div>
 
 
