@@ -139,13 +139,6 @@ function App() {
           <br />
           <div className = 'row justify-content-center'>
             
-            <div className = 'col-md-6 p-2 myCard mx-1 col-10' style = {{ backgroundColor: '#BAABDA' }} >
-              <img src = { b1 } className = 'img-fluid' />
-              <div className =  'image__overlay'>
-              <div className = 'image__title'><a target = '_blanc' href = "https://suspicious-lamarr-6e5790.netlify.app/" style = {{ color:'white' }}>Blog</a></div>
-              <p className = 'image__description'>Basic Blog site</p>
-            </div>
-            </div>
 
             <div className = 'col-md-3 p-2 col-10' style = {{ backgroundColor: '#BAABDA' }}>
                 <div className = 'mb-2'>
@@ -156,6 +149,15 @@ function App() {
                 <img src = { b3 } className = 'img-fluid' />
                 </div>
 
+            </div>
+
+
+            <div className = 'col-md-6 p-2 myCard mx-1 col-10' style = {{ backgroundColor: '#BAABDA' }} >
+              <img src = { b1 } className = 'img-fluid' />
+              <div className =  'image__overlay'>
+                <div className = 'image__title'><a target = '_blanc' href = "https://suspicious-lamarr-6e5790.netlify.app/" style = {{ color:'white' }}>Blog</a></div>
+                  <p className = 'image__description'>Basic Blog site</p>
+                </div>
             </div>
 
             
